@@ -6,7 +6,7 @@ import com.example.unittestingexample_junit4.data.local.ShoppingItem
 import com.example.unittestingexample_junit4.data.remote.responses.ImageResponse
 import com.example.unittestingexample_junit4.util.Resource
 
-class FakeSoppingRepository : ShoppingRepository {
+class FakeShoppingRepository : ShoppingRepository {
 
     private val shoppingItems = mutableListOf<ShoppingItem>()
 
@@ -30,7 +30,7 @@ class FakeSoppingRepository : ShoppingRepository {
     }
 
     override fun observeAllShoppingItems(): LiveData<List<ShoppingItem>> {
-        return observeAllShoppingItems()
+        return observableShoppingItems
     }
 
     override fun observeTotalPrice(): LiveData<Float> {
