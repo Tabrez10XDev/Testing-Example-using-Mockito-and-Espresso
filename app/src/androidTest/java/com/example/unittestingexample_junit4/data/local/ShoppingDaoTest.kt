@@ -7,6 +7,7 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import com.example.unittestingexample_junit4.getOrAwaitValue
+import com.example.unittestingexample_junit4.ui.ShoppingFragment
 import com.google.common.truth.Truth.assertThat
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
@@ -54,6 +55,13 @@ class ShoppingDaoTest {
         val allShoppingItems = dao.observeAllShoppingItems().getOrAwaitValue()
 
         assertThat(allShoppingItems).contains(shoppingItem)
+    }
+
+    @Test
+    fun launchFragmentInHiltContainer(){
+        com.example.unittestingexample_junit4.launchFragmentInHiltContainer<ShoppingFragment> {
+
+        }
     }
 
     @Test
