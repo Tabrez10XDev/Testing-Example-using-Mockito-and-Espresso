@@ -24,6 +24,7 @@ import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
 import javax.inject.Inject
 import com.google.common.truth.Truth.assertThat
+
 @MediumTest
 @HiltAndroidTest
 class ImagePickFragmentTest{
